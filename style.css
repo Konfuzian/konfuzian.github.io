@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+hr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid grey;
+  border-radius: 50%;
+  opacity: 50%;
+  margin: 30px 0;
+}
+
+hr.small {
+  margin: 30px 30%;
+}
+
+#fullpage {
+  display: grid;
+  grid-template-columns: minmax(300px, 800px);
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 20rem;
+}
+
+.content {
+  text-align: center;
+  margin: 0 12px 0;
+  padding: 10px 5% 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  backdrop-filter: grayscale(80%) brightness(60%);
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.portrait {
+  border: 8px solid white;
+  border-radius: 50%;
+}
+
+/* start language */
+
+.language {
+  position: absolute;
+  width: 50px;
+  top: 6px;
+  right: 12px;
+  z-index: 1;
+}
+
+.language:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #333;
+  border-radius: 25px;
+  border: 3px solid #444;
+  box-sizing: border-box;
+}
+
+.language:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a2/Flag_of_Germany_and_Austria.svg");
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  transition: left 0.5s;
+}
+
+.language:checked:after {
+  left: 25px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0b/English_language.svg");
+}
+
+.language:checked ~ .german {
+  display: none;
+}
+
+.language:checked ~ .english {
+  display: block;
+}
+
+.english {
+  display: none;
+}
+
+/* end language */
+/* start chips */
+
+.chip {
+  display: inline-block;
+  position: relative;
+  padding: 6px 16px 26px;
+  margin: 6px 2px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 3px solid;
+  background-color: #111;
+}
+
+.chip::after {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.great {
+  border-color: #ffffff;
+  min-width: 95px;
+}
+
+.good {
+  border-color: #888;
+  min-width: 65px;
+}
+
+.beginner {
+  border-color: #3a3a3a;
+  min-width: 30px;
+}
+
+.great::after {
+  content: "\2B50\2B50\2B50";
+}
+
+.good::after {
+  content: "\2B50\2B50";
+}
+
+.beginner::after {
+  content: "\2B50";
+}
+
+/* end chips */
+/* start scrollbar */
+
+body {
+  overflow: overlay; /* for transparent scrollbar */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+/* end scrollbar */
+/* start background */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  background: url("img/parallax-galaxy/background.jpg");
+  filter: brightness(50%);
+}
+
+.parallax-el {
+  position: fixed;
+  width: 100%;
+  height: 1600px;
+}
+
+.clouds-fg-blue {
+  top: 50px;
+  background: url("img/parallax-galaxy/clouds-fg-blue.png") no-repeat center;
+}
+
+.clouds-fg-green {
+  top: 600px;
+  background: url("img/parallax-galaxy/clouds-fg-green.png") no-repeat center;
+}
+
+.clouds-fg-red {
+  top: 1300px;
+  background: url("img/parallax-galaxy/clouds-fg-red.png") no-repeat center;
+}
+
+.clouds-fg-yellow {
+  top: 1200px;
+  background: url("img/parallax-galaxy/clouds-fg-yellow.png") no-repeat center;
+}
+
+.clouds-1 {
+  top: -20px;
+  background: url("img/parallax-galaxy/clouds-1.png") no-repeat center;
+}
+
+.clouds-2 {
+  top: -200px;
+  background: url("img/parallax-galaxy/clouds-2.png") no-repeat center;
+}
+
+.clouds-3 {
+  top: -200px;
+  background: url("img/parallax-galaxy/clouds-3.png") no-repeat center;
+}
+
+.medium-stars {
+  background: url("img/parallax-galaxy/medium-stars.png");
+}
+
+.small-stars {
+  background: url("img/parallax-galaxy/small-stars.png");
+}
+
+.tiny-stars {
+  background: url("img/parallax-galaxy/tiny-stars.png");
+}
+
+/* end background */
