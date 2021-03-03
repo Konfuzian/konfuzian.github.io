@@ -74,7 +74,7 @@ hr.small {
 }
 
 .portrait {
-  border: 8px solid white;
+  border: 10px double white;
   border-radius: 50%;
 }
 
