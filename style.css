@@ -255,7 +255,8 @@ body {
 }
 
 .clouds-3 {
-  top: -200px;
+  top: -400px;
+  left: 100px;
   background: url("img/parallax-galaxy/clouds-3.png") no-repeat center;
 }
 
