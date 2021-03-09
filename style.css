@@ -149,7 +149,7 @@ hr.small {
 
 .chip::after {
   position: absolute;
-  bottom: 7px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
