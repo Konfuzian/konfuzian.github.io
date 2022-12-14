@@ -86,7 +86,7 @@ hr.small {
 
 .language {
   -moz-appearance:initial;
-  position: absolute;
+  position: fixed;
   width: 50px;
   top: 6px;
   right: 12px;
