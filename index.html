@@ -19,29 +19,74 @@
   <body>
     <div id="fullpage">
       <div
-        class="rellax parallax-el clouds-fg-blue"
+        class="rellax parallax-el clouds-fg-blue lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-fg-blue.png"
         data-rellax-speed="15"
       ></div>
       <div
-        class="rellax parallax-el clouds-fg-red"
+        class="rellax parallax-el clouds-fg-red lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-fg-red.png"
         data-rellax-speed="12"
       ></div>
       <div
-        class="rellax parallax-el clouds-fg-green"
+        class="rellax parallax-el clouds-fg-green lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-fg-green.png"
         data-rellax-speed="10"
       ></div>
       <div
-        class="rellax parallax-el clouds-fg-yellow"
+        class="rellax parallax-el clouds-fg-yellow lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-fg-yellow.png"
         data-rellax-speed="8"
       ></div>
-      <div class="rellax parallax-el clouds-2" data-rellax-speed="5"></div>
-      <div class="rellax parallax-el clouds-3" data-rellax-speed="2"></div>
-      <div class="rellax parallax-el clouds-3-copy" data-rellax-speed="2"></div>
-      <!-- <div class="rellax parallax-el big-stars" data-rellax-speed="50"></div> -->
-      <div class="rellax parallax-el medium-stars" data-rellax-speed="15"></div>
-      <div class="rellax parallax-el small-stars" data-rellax-speed="10"></div>
-      <div class="rellax parallax-el tiny-stars" data-rellax-speed="5"></div>
-      <div class="rellax parallax-el background" data-rellax-speed="2"></div>
+      <div
+        class="rellax parallax-el clouds-2 lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-2.png"
+        data-rellax-speed="5">
+      </div>
+      <div
+        class="rellax parallax-el clouds-3 lazy-background"
+        data-background-image="img/parallax-galaxy/clouds-3.png"
+        data-rellax-speed="2">
+      </div>
+      <div
+        class="rellax parallax-el lazy-background"
+        data-background-image="img/parallax-galaxy/medium-stars.png"
+        data-rellax-speed="15">
+      </div>
+      <div
+        class="rellax parallax-el lazy-background"
+        data-background-image="img/parallax-galaxy/small-stars.png"
+        data-rellax-speed="10">
+      </div>
+      <div
+        class="rellax parallax-el lazy-background"
+        data-background-image="img/parallax-galaxy/tiny-stars.png"
+        data-rellax-speed="5">
+      </div>
+      <div
+        class="rellax parallax-el background"
+        data-rellax-speed="2">
+      </div>
+
+      <script>  // Lazy loading the less important images
+        
+        const lazyBackgrounds = document.querySelectorAll('.lazy-background');
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              console.log("EST")
+              const imgUrl = entry.target.dataset.backgroundImage;
+              entry.target.style.backgroundImage = `url('${imgUrl}')`;
+              observer.unobserve(entry.target); // Stop observing once loaded
+            }
+          });
+        });
+      
+        lazyBackgrounds.forEach(lazyBg => {
+          observer.observe(lazyBg);
+        });
+      </script>
 
       <input type="checkbox" class="language">
 

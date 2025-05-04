@@ -232,50 +232,31 @@ body {
 
 .clouds-fg-blue {
   top: 50px;
-  background: url("img/parallax-galaxy/clouds-fg-blue.png") no-repeat center;
-}
-
-.clouds-fg-green {
-  top: 600px;
-  background: url("img/parallax-galaxy/clouds-fg-green.png") no-repeat center;
 }
 
 .clouds-fg-red {
   top: 1300px;
-  background: url("img/parallax-galaxy/clouds-fg-red.png") no-repeat center;
+}
+
+.clouds-fg-green {
+  top: 600px;
 }
 
 .clouds-fg-yellow {
   top: 1200px;
-  background: url("img/parallax-galaxy/clouds-fg-yellow.png") no-repeat center;
 }
 
 .clouds-1 {
   top: -20px;
-  background: url("img/parallax-galaxy/clouds-1.png") no-repeat center;
 }
 
 .clouds-2 {
   top: -200px;
-  background: url("img/parallax-galaxy/clouds-2.png") no-repeat center;
 }
 
 .clouds-3 {
   top: -400px;
   left: 100px;
-  background: url("img/parallax-galaxy/clouds-3.png") no-repeat center;
-}
-
-.medium-stars {
-  background: url("img/parallax-galaxy/medium-stars.png");
-}
-
-.small-stars {
-  background: url("img/parallax-galaxy/small-stars.png");
-}
-
-.tiny-stars {
-  background: url("img/parallax-galaxy/tiny-stars.png");
 }
 
 /* end background */
